@@ -37,13 +37,21 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
         btnPrimos = new javax.swing.JButton();
         lblMensaje = new javax.swing.JLabel();
         lblNumAnterior = new javax.swing.JLabel();
+        lblSumaPrimos = new javax.swing.JLabel();
+        lblRaizCuadrada = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        lblTitulo.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 48)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(153, 0, 0));
         lblTitulo.setText("Comprobacion");
 
+        lblNum.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
         lblNum.setText("Ingresar un numero:");
 
+        btnComprobar.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
         btnComprobar.setText("Comprobar");
         btnComprobar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,6 +59,9 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
             }
         });
 
+        lblMessage.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
+
+        btnPrimos.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 24)); // NOI18N
         btnPrimos.setText("Obtener");
         btnPrimos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,59 +69,75 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
             }
         });
 
+        lblMensaje.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
+
+        lblNumAnterior.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 14)); // NOI18N
+
+        lblSumaPrimos.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
+
+        lblRaizCuadrada.setBackground(new java.awt.Color(255, 0, 0));
+        lblRaizCuadrada.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 18)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(87, 87, 87)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(lblNum)
+                        .addGap(47, 47, 47)
+                        .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(265, 265, 265)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(116, 116, 116)
+                                        .addComponent(lblMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                                    .addComponent(lblSumaPrimos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(lblRaizCuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblNumAnterior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(29, 29, 29))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(83, 83, 83)
                 .addComponent(btnPrimos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnComprobar)
-                .addGap(69, 69, 69))
+                .addGap(84, 84, 84))
             .addGroup(layout.createSequentialGroup()
-                .addGap(175, 175, 175)
+                .addGap(102, 102, 102)
                 .addComponent(lblTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNum))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblNumAnterior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblMensaje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(26, 26, 26))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(20, 20, 20)
                 .addComponent(lblTitulo)
-                .addGap(53, 53, 53)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNum)
                     .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblNumAnterior, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnComprobar)
-                            .addComponent(btnPrimos))
-                        .addGap(36, 36, 36))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addComponent(lblMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblSumaPrimos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblRaizCuadrada, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblNumAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnComprobar)
+                    .addComponent(btnPrimos))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -122,14 +149,17 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
         int comprobacion = 0;
         
         int numPerfecto = Integer.parseInt(txtNum.getText());
-        
+        //cada iteracion verifica si numPerfecto es divisible por el número actual i
+        //El operador % se utiliza para calcular el residuo de la división. Si el residuo es igual a cero
+        //Si la condición se cumple, se agrega el valor de i a la variable comprobacion. 
+        //Esta variable se está utilizando para acumular la suma de los divisores de numPerfecto.
         for (int i = 1; i < numPerfecto; i++) {
 
             if(numPerfecto%i==0){
                 comprobacion += i;   
             }
         }
-            
+            //si comprobacion es igual a numPerfecto, entonces numPerfecto es un número perfecto y muestra un mensaje.
             if(comprobacion==numPerfecto){
            
             lblMessage.setText("Es un numero perfecto");
@@ -152,17 +182,19 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         int comprobacion = 0;
-        int numAnterior = 0;
         
         int numPrimo = Integer.parseInt(txtNum.getText());
         
+        //con el ciclo for iterar sobre todos los números desde 1 hasta numPrimo
         for (int i = 1; i <= numPrimo; i++) {
-
+            //El operador % se utiliza para calcular el residuo de la división.
             if(numPrimo%i==0){
+                //Este contador se está utilizando para contar cuántos divisores tiene numPrimo.
                 comprobacion ++;   
             }
         }
-        
+        //Validacion de numeros, con un mensaje damos a conocer si el numero es primo o no
+        //comprobacion guarda el numero de divisores y si se compara a dos es par
             if(comprobacion==2){
            
             lblMensaje.setText("Es un numero Primo");
@@ -171,13 +203,55 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
         lblMensaje.setText("No es numero Primo");
         lblMensaje.setForeground(Color.RED);
             }
-            
-        for (int i = 1; i < numPrimo; i++) {
-            if(numPrimo%i==0){
-                comprobacion ++;   
-                int[] listaNum = new int [i];
-            
+
+        // Arreglo para almacenar los números primos
+        int[] numAnt = new int[numPrimo + 1];
+        int contador = 0;
+        int sumaNum = 0;
+
+        // Ciclo for para iterar sobre los números anteriores al número ingresado
+        for (int i = 2; i < numPrimo; i++) {
+            boolean antPrimo = true;
+
+            // Verificar si el número actual es primo
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    antPrimo = false;
+                    break;
+                }
             }
+
+            // Si el número es primo, guárdalo en el arreglo
+            if (antPrimo) {
+                numAnt[contador] = i;
+                sumaNum += i;
+                contador++;
+            }
+        }
+
+        // Construir el mensaje con los números primos anteriores
+        //clase StringBuilder para construir eficientemente una cadena de texto
+        //Se crea un nuevo objeto StringBuilder llamado mensajeAnteriores
+        //utilizando el método append. Además, se agrega una coma y un espacio después de cada número para separarlos
+        StringBuilder mensajeAnteriores = new StringBuilder("Números primos anteriores: ");
+        for (int i = 0; i < contador; i++) {
+            mensajeAnteriores.append(numAnt[i]).append(", ");
+        }
+
+        // Imprimir el mensaje con los números primos anteriores y la suma
+        lblNumAnterior.setText(mensajeAnteriores.toString());
+        lblSumaPrimos.setText("Suma de números primos: " + sumaNum);
+        
+        //Calcular la raiz con la variable donde se guarda la suma de los numeros primos e imprimir el mensaje en un label        
+        double raizCuadrada = Math.sqrt(sumaNum);
+        lblRaizCuadrada.setText("Raíz cuadrada: " + raizCuadrada);
+        
+        
+        
+        
+        
+        
+    
             
             
         
@@ -235,6 +309,8 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
     private javax.swing.JLabel lblMessage;
     private javax.swing.JLabel lblNum;
     private javax.swing.JLabel lblNumAnterior;
+    private javax.swing.JLabel lblRaizCuadrada;
+    private javax.swing.JLabel lblSumaPrimos;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JTextField txtNum;
     // End of variables declaration//GEN-END:variables
